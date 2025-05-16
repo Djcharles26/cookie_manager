@@ -1,0 +1,22 @@
+name: cookie_manager
+description: "Cookie manager"
+version: 1.0.0
+homepage: https://github.com/Djcharles26/cookie_manager.git
+
+environment:
+  sdk: ^3.7.2
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  encrypt: ^5.0.3
+  intl: ^0.20.2
+  web: null
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
