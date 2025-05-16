@@ -2,6 +2,11 @@ name: cookie_manager
 description: "Cookie manager"
 version: 1.0.0
 homepage: https://github.com/Djcharles26/cookie_manager.git
+repository: https://github.com/Djcharles26/cookie_manager.git
+issue_tracker: https://github.com/Djcharles26/cookie_manager.git/issues
+
+platforms: 
+  web:
 
 environment:
   sdk: ^3.7.2
