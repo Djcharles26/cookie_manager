@@ -110,13 +110,16 @@ class CookieManager {
       ).format(DateTime(0));
       cookieStr.write('expires=$expiredTimeStr GMT; ');
     } else  if (maxAge != null) {
-      cookieStr.write('MaxAge=${maxAge.inSeconds}; ');
+      cookieStr.write('Max-Age=${maxAge.inSeconds}; ');
     }
 
     if (isInIframe && manageIframeSettings) {
       cookieStr.write("SameSite=None; Secure; ");
     } else if (requiresDomain) {
-      cookieStr.write ("domain=${getMainDomain(Uri.base)}; ");
+      final domain = getMainDomain(Uri.base);
+      if (domain.isNotEmpty) {
+        cookieStr.write ("domain=$domain; ");
+      }
     }
     
     cookieStr.write("path=/ ");
